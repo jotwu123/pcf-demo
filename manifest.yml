@@ -1,7 +1,16 @@
 ---
+# general settings for all applications configured within manifest
+instances: 1
+memory: 1G
+
+# app specific configuration
 applications:
 - name: pcf-demo
-  memory: 1G
   random-route: false
   path: target/pcf-demo-0.0.1-SNAPSHOT.jar
 
+# buildpack: https://github.com/cloudfoundry/java-buildpack.git#v3.3.0
+
+#  env:
+#    <VAR_NAME>: <VALUE>
+# use: cf env <APP_NAME> to see all variables assigned to app form cli
